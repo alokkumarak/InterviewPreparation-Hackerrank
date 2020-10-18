@@ -1,0 +1,32 @@
+#include<stdio.h>
+void linear(int [],int);
+
+void linear(int arr[], int n ){
+	int i,data,count=0;
+	printf("\nENTER A DATA FOR SEARCH : ");
+	scanf("%d",&data);
+	for(i=0;i<n;i++){
+		count++;
+		if(arr[i]==data){
+			printf(" %d FOUND at %dth place!",arr[i],count);
+			return;
+		}
+	}
+	printf("\n%d NOT FOUND !!",data);
+}
+
+int main(){
+	int arr[20];
+	int n,i;
+	
+	printf("\nENTER THE SIZE OF THE ARRAY :");
+	scanf("%d",&n);
+	printf("\nENTER THE ELEMENTS : ");
+	for(i=0;i<n;i++){
+		scanf("%d",&arr[i]);
+	}
+
+	linear(arr,n);
+	
+	return 0;
+}
